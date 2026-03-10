@@ -15,7 +15,7 @@ jobs:
       - name: Secure Update
         run: |
           # 1. Рандомна затримка
-          sleep $((RANDOM % 1800))
+          sleep $((RANDOM % 800))
           
           # 2. Шанс на пропуск для органічного вигляду (20%)
           if [ $((RANDOM % 10)) -lt 2 ]; then
@@ -43,7 +43,7 @@ jobs:
           echo "$(tail -n 40 market_data.log)" > market_data.log
 
           # 6. Налаштування Git та Пуш
-          git config --local user.email "action@github.com"
+          git config --local user.email "sergeevnaalina587@gmail.com"
           git config --local user.name "GitHub Action Bot"
           
           git add market_data.log
